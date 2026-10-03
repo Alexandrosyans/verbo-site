@@ -3,96 +3,114 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f0e7">
-  <meta name="description" content="Verbo privacy policy and support.">
-  <title>Verbo — Privacy & Support</title>
+  <meta name="description" content="Verbo privacy policy and help.">
+  <title>Verbo</title>
   <style>
-    :root { color-scheme: light; --paper:#f4f0e7; --paper-deep:#ebe5d9; --ink:#292821; --muted:#777267; --rule:#d9d2c5; --accent:#53634f; }
+    :root { --paper:#f4efe4; --surface:#fbf8f2; --ink:#211f1a; --body:#211f1acc; --muted:#8a8378; --rule:#e2dccf; color-scheme:light dark; }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper:#1b1a17; --surface:#262420; --ink:#efe9dd; --body:#efe9ddd1; --muted:#9a9387; --rule:#34312b; }
+    }
     * { box-sizing:border-box }
     html { scroll-behavior:smooth }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif; -webkit-font-smoothing:antialiased; }
-    a { color:inherit; text-decoration-color:#9b9a83; text-underline-offset:3px }
-    a:hover { color:var(--accent) }
-    .wrap { width:min(100% - 40px, 720px); margin:0 auto }
-    header { padding:30px 0 20px; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:center; gap:20px }
-    .brand { font-size:20px; letter-spacing:.01em }
-    .brand span { color:var(--muted); font-size:13px; margin-left:8px }
-    nav { display:flex; gap:20px; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:13px; color:var(--muted) }
+    body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif; -webkit-font-smoothing:antialiased; }
+    .serif { font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+    a { color:inherit; text-underline-offset:3px; text-decoration-thickness:1px }
+    .wrap { width:min(100% - 48px, 640px); margin:0 auto }
+    header { display:flex; justify-content:space-between; align-items:baseline; padding:28px 0 0 }
+    header .name { font-size:24px; text-decoration:none }
+    nav { display:flex; gap:22px; font-size:15px; color:var(--muted) }
     nav a { text-decoration:none }
-    main { padding:58px 0 80px }
-    .eyebrow { font:600 11px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--accent) }
-    h1 { font-size:clamp(38px,8vw,54px); line-height:1.06; font-weight:400; letter-spacing:-.035em; margin:13px 0 12px }
-    .date { color:var(--muted); font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif }
-    .intro { font-size:20px; line-height:1.55; max-width:620px; margin:34px 0 44px }
-    section { border-top:1px solid var(--rule); padding:25px 0 24px; display:grid; grid-template-columns:190px 1fr; gap:24px }
-    h2 { font-size:21px; font-weight:400; line-height:1.3; margin:0 }
-    p, li { font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#48463f; margin:0 0 12px }
-    p:last-child, li:last-child { margin-bottom:0 }
-    ul { padding-left:19px; margin:0 }
-    .contact { background:var(--paper-deep); border-radius:14px; padding:22px 24px; margin-top:30px }
-    .contact h2 { margin-bottom:8px }
-    footer { border-top:1px solid var(--rule); padding:22px 0 32px; color:var(--muted); font:12px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; display:flex; justify-content:space-between; gap:16px }
-    @media (max-width:580px) { .wrap{width:min(100% - 32px,720px)} header{align-items:flex-start} nav{gap:14px} section{grid-template-columns:1fr;gap:9px;padding:21px 0} main{padding-top:42px} .intro{font-size:18px;margin:28px 0 36px} }
+    nav a:hover { color:var(--ink) }
+    article { padding:56px 0 8px }
+    article + article { border-top:1px solid var(--rule); margin-top:48px; padding-top:48px }
+    h1 { font-weight:400; font-size:34px; line-height:1.15; margin:0 }
+    .updated { color:var(--muted); font-size:15px; margin-top:6px }
+    .lead { font-size:19px; line-height:1.5; margin:28px 0 0 }
+    h2 { font-weight:400; font-size:21px; line-height:1.3; margin:28px 0 8px }
+    p, li { color:var(--body); margin:0 0 10px }
+    ul { padding-left:20px; margin:0 0 10px }
+    .button { display:inline-block; margin-top:4px; padding:10px 20px; border-radius:999px; background:var(--ink); color:var(--paper); text-decoration:none; font-size:16px }
+    footer { color:var(--muted); font-size:13px; padding:48px 0 40px }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">Verbo <span>Language, one word at a time.</span></div>
-      <nav aria-label="Main navigation"><a href="#privacy">Privacy</a><a href="#support">Support</a></nav>
+      <a class="name serif" href="#">Verbo</a>
+      <nav aria-label="Pages"><a href="#privacy">Privacy</a><a href="#support">Help</a></nav>
     </header>
-    <main id="privacy">
-      <div class="eyebrow">Your words are yours</div>
-      <h1>Privacy Policy</h1>
-      <div class="date">Last updated 2 October 2026</div>
-      <p class="intro">Verbo works without an account. We don’t run ads or analytics, and we don’t operate a server that stores your learning history.</p>
 
-      <section>
-        <h2>Information we handle</h2>
-        <div><p>Your settings, saved words, practice history and streak are kept on your device. Verbo’s widgets read the shared app data needed to show your words and progress.</p><p>iCloud Sync is enabled by default. When available, your saved words, review progress and learning statistics sync through your private iCloud account so they can appear on your Apple devices. Apple operates iCloud; Verbo’s developer cannot access your private CloudKit database. Apple’s <a href="https://www.apple.com/legal/privacy/">privacy policy</a> applies to its services.</p></div>
-      </section>
-      <section>
-        <h2>Dictionary services</h2>
-        <div><p>To find words, definitions, examples and pronunciations, the app connects directly to:</p><ul><li><a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wiktionary and Wikimedia Commons</a>, operated by the Wikimedia Foundation. The word requested is sent to them.</li><li><a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>, to retrieve public frequency lists used to choose words.</li></ul><p>These services receive the normal connection information, such as your device’s IP address, and apply their own privacy policies. Verbo does not send them your name, email address, saved-word list or practice history.</p></div>
-      </section>
-      <section>
-        <h2>Speech and microphone</h2>
-        <div><p>The microphone is used only when you choose Speak practice and grant microphone access. Apple’s Speech framework checks what you say. Depending on your device, language and settings, Apple may process speech on-device or using its services. Verbo does not record or retain your voice on its own servers. See <a href="https://www.apple.com/legal/privacy/">Apple’s privacy information</a>.</p></div>
-      </section>
-      <section>
-        <h2>Notifications</h2>
-        <div><p>Reminders are scheduled by iOS on your device. Verbo does not send your reminder schedule to its own server.</p></div>
-      </section>
-      <section>
-        <h2>Purchases</h2>
-        <div><p>Apple processes App Store purchases and subscriptions. Verbo uses StoreKit to check whether Premium features are available. We do not receive your payment card details or Apple Account identity. You can manage or cancel a subscription in your Apple Account settings.</p></div>
-      </section>
-      <section>
-        <h2>Retention and control</h2>
-        <div><p>You can manage saved words and learning history in Verbo. You can turn off iCloud Sync in the app’s Settings or manage Verbo’s iCloud data through Apple’s iCloud settings. Removing the app removes its local app data; iCloud data is managed separately by Apple.</p></div>
-      </section>
-      <section>
-        <h2>Messages to support</h2>
-        <div><p>If you choose to email us, your email app opens with a draft. We receive your address and the message only if you send it. Verbo adds its app version and your iOS version to the draft; word reports may also include the word, language and meaning shown so we can investigate. We do not receive drafts you discard.</p></div>
-      </section>
-      <section>
-        <h2>Children</h2>
-        <div><p>Verbo does not ask for a name, email address or account. It is not designed to collect personal information from children. Dictionary entries are user-contributed and can vary in subject matter.</p></div>
-      </section>
-      <section>
-        <h2>Changes</h2>
-        <div><p>If this policy changes, we will update this page and the policy shown in the app, along with the revision date.</p></div>
-      </section>
-      <section id="support">
-        <h2>Support</h2>
-        <div><p>Questions, feature ideas or a word to report? Email <a href="mailto:verboapp.team@outlook.com">verboapp.team@outlook.com</a>. Verbo opens a message in your email app; you choose whether to send it.</p><p>For subscription billing, refunds or cancellation, use Apple’s <a href="https://reportaproblem.apple.com/">Report a Problem</a> and subscription settings.</p><p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple’s Standard EULA</a></p></div>
-      </section>
-      <aside class="contact">
-        <h2>A note on word sources</h2>
-        <p>Dictionary content and recordings are contributed to Wiktionary and Wikimedia Commons under their respective open licences. Attribution and source details are available in Verbo under Settings → Credits and on word entries where available.</p>
-      </aside>
-    </main>
-    <footer><span>© 2026 Verbo</span><span>Made for curious minds.</span></footer>
+    <article id="privacy">
+      <h1 class="serif">Privacy Policy</h1>
+      <div class="updated">Last updated 2 October 2026</div>
+      <p class="lead serif">Verbo works without an account. There are no ads, analytics or tracking. Some features connect directly to Apple, Wikimedia and GitHub; those services process the information needed to provide the feature, as described below.</p>
+
+      <h2 class="serif">What we collect</h2>
+      <p>Verbo has no developer-run servers and we don’t collect, store or sell your saved words, practice history or language choices. A word request is sent to the public dictionary services below, and Apple processes iCloud sync, speech recognition and purchases. Those services handle information under their own privacy policies.</p>
+
+      <h2 class="serif">What stays on your iPhone</h2>
+      <p>Your settings, Logbook, practice progress and streak are stored on your iPhone. Verbo’s widgets read the shared app data needed to show your words and progress. Removing the app removes local data; iCloud data is managed separately by Apple.</p>
+
+      <h2 class="serif">iCloud Sync</h2>
+      <p>iCloud Sync is on by default. Your saved words, review progress and learning statistics are stored in your private iCloud database and can sync to your other Apple devices. The developer cannot access this private database. Sync requires an iCloud account; you can turn it off in Settings. Apple’s <a href="https://www.apple.com/legal/privacy/">privacy policy</a> applies.</p>
+
+      <h2 class="serif">Services Verbo connects to</h2>
+      <p>To find new words, meanings and pronunciations, Verbo connects directly to free, public services:</p>
+      <ul>
+        <li><strong>Wiktionary and Wikimedia Commons</strong>, run by the Wikimedia Foundation, for meanings, examples and native-speaker recordings. The word being loaded or looked up is sent to them.</li>
+        <li><strong>GitHub</strong>, for public lists of common words in each language.</li>
+      </ul>
+      <p>Like any website, they can see your device’s IP address when Verbo connects, but they receive nothing that identifies you personally. Their own policies apply: <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia</a> and <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>.</p>
+
+      <h2 class="serif">Microphone and speech</h2>
+      <p>Verbo only uses the microphone during Speak practice, after you tap the microphone button. Apple’s speech recognition turns your voice into text to check your pronunciation, and Apple may process it under its privacy policy. Verbo never records, stores or sends your voice anywhere else.</p>
+
+      <h2 class="serif">Notifications</h2>
+      <p>Reminders are scheduled on your iPhone. No notification data leaves your device.</p>
+
+      <h2 class="serif">Purchases</h2>
+      <p>Verbo Premium is sold by Apple. Apple handles payment, and we never see your name, card or Apple Account. The app only learns whether a purchase is active.</p>
+
+      <h2 class="serif">Children</h2>
+      <p>Verbo does not ask for a name, email address or account and is not designed to collect personal information from children. Dictionary entries are user-contributed and may vary in subject matter.</p>
+
+      <h2 class="serif">Changes</h2>
+      <p>If this policy changes, the new version will appear here and in the app, with a new date.</p>
+
+      <h2 class="serif">Contact</h2>
+      <p>Questions about privacy: <a href="mailto:verboapp.team@outlook.com">verboapp.team@outlook.com</a>. If you choose to email us, we receive your address and message only if you send it. Verbo adds its app version and your iOS version to the draft; word reports may also include the word, language and meaning shown so we can investigate.</p>
+    </article>
+
+    <article id="support">
+      <h1 class="serif">Help</h1>
+
+      <h2 class="serif">Restoring Premium</h2>
+      <p>Bought Premium on another device, or reinstalled Verbo? Open Settings in Verbo and tap Restore Purchases, signed in with the same Apple Account.</p>
+
+      <h2 class="serif">Cancelling a subscription</h2>
+      <p>Subscriptions are managed by Apple. Cancel at least a day before renewal and Premium stays on until the end of the period you’ve paid for. On your iPhone, open Settings, tap your name, then Subscriptions.</p>
+
+      <h2 class="serif">Refunds</h2>
+      <p>Apple handles refunds and usually replies within 48 hours. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> and choose Verbo.</p>
+
+      <h2 class="serif">Adding a widget</h2>
+      <p>Touch and hold your Home Screen, tap Edit, then Add Widget, and search for Verbo. The Review widget lets you practise without opening the app.</p>
+
+      <h2 class="serif">A word looks or sounds wrong</h2>
+      <p>Meanings come from Wiktionary, written by volunteers. If a recording sounds poor, tap ••• on the word and choose Report Bad Audio, and Verbo will use a different voice. If a meaning or example is wrong, choose Report a Mistake to tell us. To stop seeing a word, choose Not for Me.</p>
+
+      <h2 class="serif">Words aren’t loading</h2>
+      <p>New words need an internet connection. To learn offline, open Settings and tap Download for Offline while you’re connected.</p>
+
+      <h2 class="serif">Get in touch</h2>
+      <p>Questions, problems or ideas: we read every message and reply as soon as we can.</p>
+      <p><a class="button" href="mailto:verboapp.team@outlook.com?subject=Verbo%20help">Email Us</a></p>
+
+      <h2 class="serif">Terms of Use</h2>
+      <p>Verbo is provided under Apple’s standard <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a>. Word content is from Wiktionary and Wikimedia Commons under Creative Commons licences; see Credits in Verbo’s Settings.</p>
+    </article>
+
+    <footer>© 2026 Alexander Eghoyan</footer>
   </div>
 </body>
 </html>
